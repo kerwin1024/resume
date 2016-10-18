@@ -1,0 +1,482 @@
+@charset "utf-8";
+/*rest*/
+body, ol, ul, dl, dd, h1, h2, h3, h4, h5, h6, p, pre, th, td, select, input, textarea {
+    margin: 0;
+    padding: 0;
+}
+
+/*初始化默认边距及填充*/
+/*header,nav,footer,article,section,aside,*/
+body {
+    font: 62.5% "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: url("../img/body_bg.png")
+}
+
+li {
+    list-style: none;
+}
+
+p {
+    word-wrap: break-word;
+}
+
+/*允许长单词换行*/
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+/*=====begin*/
+.begin {
+    width: 1130px;
+    height: 590px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+/*====资料卡info*/
+.info {
+    width: 280px;
+    height: 580px;
+    background: #3B5998;
+    font-size: 1.6em;
+    color: #839CCF;
+    float: left;
+}
+
+/*===头像栏*/
+.head {
+    text-align: center;
+    border-bottom: 1px solid #839CCF;
+}
+
+/*公共样式-commonality*/
+.head_com {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*==头像*/
+.head img {
+    width: 50%;
+    margin-top: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border:6px solid #839CCF;
+}
+
+.head h1 {
+    line-height: 2em;
+    font-weight:400;
+}
+
+.head p {
+    line-height: 2em;
+}
+
+.head address {
+    line-height: 2em;
+}
+
+/*===自我介绍*/
+.intro {
+    margin-top: 20px;
+    border-bottom: 1px solid #839CCF;
+    padding-bottom: 20px;
+    font-size: 0.875em;
+}
+
+/*===联系方式*/
+.info_touch {
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*==标题*/
+.info_touch label {
+}
+
+/*==联系按钮*/
+.info_touch_button {
+    margin-top: 10px;
+}
+
+/*=按钮*/
+.info_touch_button a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    line-height: 50px;
+    box-sizing: border-box;
+    transition: all 0.8s ease-out;
+}
+.info_touch_button a:hover{
+    background:#fff;
+    color:#3B558B;
+}
+/*====导航条nav*/
+.nav {
+    width: 76px;
+    height: 580px;
+    float: left;
+    margin-left: 10px;
+}
+
+/*===导航li*/
+.nav li {
+    width: 76px;
+    height: 76px;
+    background: #3B5998;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    transition:all .5s ease-out;
+}
+.nav li:hover{
+    background:#fff;
+}
+.nav li:hover span{
+    background:#3B558B;
+    color:#fff;
+}
+/*==导航图标*/
+.nav li span {
+    margin-top: 16px;
+    width: 42px;
+    height: 42px;
+    line-height: 1.5em;
+    text-align: center;
+    background: #fff;
+    color: #3B5998;
+    border-radius: 50%;
+}
+
+.nav li:nth-child(6) {
+    background: #455763;
+    margin-top: 50px;
+}
+
+.nav li:nth-child(7) {
+    background: #455763;
+}
+
+/*====内容*/
+/*内容显示区域*/
+.content {
+    width: 754px;
+    height: 580px;
+    float: right;
+    margin-left: 10px;
+    overflow: scroll;
+    position: relative;
+    background:#fff;
+}
+
+/*宽度大于800时隐藏*/
+.content h1 {
+    display: none;
+    cursor: pointer;
+    font-weight:100;
+}
+.content h1 span{
+    float: right;
+    line-height:51px;
+    margin-right:10px;
+}
+/*公共，几个栏目的公共样式*/
+.contents {
+    position: absolute;
+    display: block;
+    font-size:1.4em;
+    overflow: hidden;
+    transition: all .3s ease-out;
+    height:0px;
+}
+.contents h2{
+    padding-left:20px;
+    background:url("../img/title_h2.png") center left no-repeat;
+    color:#3B5998;
+    margin:0 20px 20px;
+    border-bottom:1px solid #3B5998;
+    font-size: 2em;
+    font-weight:400;
+    line-height: 2em;
+    padding-left:1em;
+}
+.contents h3{
+    color:#3B5998;
+    border-bottom:1px solid #3B5998;
+    margin:0 20px 20px;
+    font-weight:400;
+    line-height: 2em;
+
+}
+/*===关于我aboutMe*/
+.begin .aboutMe {
+    width: 100%;
+    height:560px;
+}
+/*==文字介绍*/
+.ab_info{
+    width:360px;
+    float:left;
+}
+.ab_info li{
+    line-height: 2em;
+}
+.ab_info label{
+    display: inline-block;
+    width:150px;
+    color:#3B5998;
+    padding-left:5px;
+    margin-left:20px;
+}
+.ab_info label span{
+    text-align: center;
+    width:20px;
+}
+.ab_info p{
+    margin-left:20px;
+    text-indent: 1em;
+    margin-top:20px;
+}
+/*==图片轮播*/
+.ab_img{
+    width:360px;
+    height:450px;
+    overflow: hidden;
+    float:right;
+    position: relative;
+}
+.ab_img img{
+    visibility: visible;
+    position: absolute;
+    transition: all 1s linear;
+    opacity: 0;
+}
+.ab_img img:nth-child(4)
+/*===个人资料*/
+.personalInfo{
+    
+}
+/*==左边技能*/
+.skills{
+    width:360px;
+    height:400px;
+    float: left;
+}
+/*公共样式*/
+/*公共背景*/
+.skillBar{
+    height:22px;
+    margin:0 20px 20px;
+    background:#eee;
+    position: relative;
+}
+/*名*/
+.skillName{
+    position: absolute;
+    height:22px;
+    padding:0 10px;
+    background: #3B558B;
+    color:#fff;
+}
+/*值*/
+.skillValue{
+    position: absolute;
+    width:90%;
+    height:22px;
+    background:#5F77A9;
+}
+/*num*/
+.skillNumber{
+    position: absolute;
+    /*height:22px;*/
+    line-height: 22px;
+    right: 0;
+    color:#bbb;
+    font-size: 0.85em;
+}/*公共样式结束*/
+/*==右边经验*/
+.experience{
+    width:360px;
+    float: right;
+}
+/*经验*/
+.experience h3{
+    
+}
+/*项目名*/
+.experience h4{
+    margin:0 20px;
+    color:#3B558B;
+}
+.experience h4 span{
+    float: right;
+    color:#3B558B;
+    line-height: 2em;
+}
+/*目标对象*/
+.experience h5{
+    margin:0 20px;
+    line-height: 2em;
+    color:#3B558B;
+}
+/*内容*/
+.experience p{
+    margin:0 20px;
+    line-height: 2em;
+}
+/*===主要作品*/
+.myWork {
+}
+/*标签栏*/
+.workBar{
+    width:100%;
+    margin-left:20px;
+}
+.workBar li{
+    padding:0px 10px;
+    height:30px;
+    float: left;
+    background:#5F77A9;
+    margin-left: 10px;
+    cursor:pointer;
+    line-height:30px;
+}
+.workBar li:nth-child(1){
+    margin-left:0px;
+    margin-top:0px;
+}
+/*作品列表*/
+.workShow{
+    width:100%;
+    height:480px;
+}
+.workShow li{
+    width:30%;
+    float: left;
+    margin-top:20px;
+    margin-left: 20px;
+}
+.workShow li img{
+    width:100%;
+}
+/*===本人博客*/
+.myBlog{
+    width:100%;
+    
+}
+/*==滚动图片*/
+.blogBanner{
+    width:100%;
+    height:300px;
+    background: #fff;
+    position: relative;
+}
+.blogBanner img{
+    width:80%;
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    buttom:0;
+    margin:auto;
+}
+.blogTag{
+    margin:0 20px;
+}
+.blogTag span{
+    padding-left:5px;
+    color:#3B558B;
+}
+
+/*正文*/
+.blogText{
+    margin:10px 20px 0 20px;
+    line-height:1.5em;
+    text-indent: 2em;
+}
+/*====联系方式*/
+.contactMe{
+    
+}
+/*==地图位置*/
+.conMap{
+    height:300px;
+    margin:0 20px;
+    border:1px solid #ccc;
+}
+.contactLeft{
+    width:360px;
+    float: left;
+}
+.contactRight{
+    width:360px;
+    float: right;
+}
+/*follow按钮*/
+.follow{
+    margin-left:30px;
+}
+.follow a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    line-height: 50px;
+    background:#3B558B;
+    text-align: center;
+}
+/*留言栏*/
+.contactRight{
+    
+}
+.conForm{
+    margin-left:20px;
+}
+.conForm label{
+    display: block;
+
+}
+.inputT{
+    width:300px;
+    height:26px;
+}
+
+/*内容框*/
+.contactRight textarea{
+    width:90%;
+    height:160px;
+}
+/*重置按钮*/
+.reset{
+    display: block;
+    width:120px;
+    height:26px;
+    float: left;
+}
+/*提交按钮*/
+.ok{
+    display: block;
+    width:120px;
+    height:26px;
+    float: left;
+    font-size:0.875em;
+    margin-left:10px;
+}
